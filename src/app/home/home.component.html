@@ -1,0 +1,97 @@
+<div class="container-fluid bg-dark">
+  <app-header-one></app-header-one>
+  <div class="container my-2">
+    <h1 class="text-white">EVENTS & NEWS</h1>
+    <h3 class="text-success">Learn, Compete & Grow</h3>
+  </div>
+
+  <div class="container mt-5 box-main">
+    <!-- <app-header-two></app-header-two> -->
+    <header class="text-bg-success #head2 navbar-nav">
+      <div class="container">
+        <ul class="header2">
+          <li class="nav-item">
+            <a class="nav-link px-2 text-white" (click)="eventCategoryChange(1)"
+              >Events</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-white" (click)="eventCategoryChange(2)"
+              >Webinars</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-white" (click)="eventCategoryChange(3)"
+              >Coding</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-white" (click)="eventCategoryChange(4)"
+              >Bootcamp</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-white" (click)="eventCategoryChange(5)"
+              >Workshop</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <header class="text-bg-dark">
+      <div class="container">
+        <ul class="head3">
+          <li>
+            <a
+              class="nav-link px-2 text-white"
+              (click)="eventSubCategoryChange(11)"
+              >Upcoming</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link px-2 text-white"
+              (click)="eventSubCategoryChange(12)"
+              >Archived</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link px-2 text-white"
+              (click)="eventSubCategoryChange(13)"
+              >Favorites</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="row d-flex row">
+      <div class="card-con col-9">
+        <app-card *ngFor="let e of event" [event]="e"></app-card>
+      </div>
+      <div class="col-3 colc">
+        <app-list-group (tagsEmit)="onChnageTag($event)"></app-list-group>
+      </div>
+      <!-- <app-pagination></app-pagination> -->
+      <nav class="my-1" aria-label="Page navigation example ">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" (click)="eventPageChange(1)">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" (click)="eventPageChange(2)">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" (click)="eventPageChange(3)">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" (click)="eventPageChange(11)">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+>

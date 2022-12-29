@@ -1,0 +1,20 @@
+.header2
+{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    overflow: auto;
+}
+.header2 ul li{
+    display: inline-block;
+}
+.head ul
+{
+    display: flex;
+    list-style: none;
+    padding: 5px;
+}
+.head ul li{
+    padding: 5px;
+    display: block;
+}

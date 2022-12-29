@@ -1,0 +1,11 @@
+<div class="">
+  <h3 class="text-white">TAGS</h3>
+  <button
+    type="button"
+    class="btn btn-sm btn-outline-info mx-1 my-1"
+    *ngFor="let x of alltags; let i = index"
+    (click)="onselectTag(i)"
+  >
+    {{ x }}
+  </button>
+</div>
